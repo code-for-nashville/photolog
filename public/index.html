@@ -13,7 +13,12 @@
     <script src="/material.js"></script>
   </head>
   <body>
-    <div id="app"></div>
+      <div id="app">
+          <div v-for="photo in photos">
+            <h3> {{ photo.phoneNumber }} </h3>
+            <img :url="photo.url"/>
+          </div>
+      </div>
     <script src="vue.js"></script>
     <script src="build.js"></script>
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID.-->
