@@ -16,7 +16,8 @@ app.get("/photos", (req, res) => {
 
             else {
                 console.log(photoResp.text)
-                return res.json(photoResp.text)
+                res.set("content-type", "application/json")
+                return res.end(photoResp.text)
             }
         })
 })
