@@ -11,12 +11,12 @@ app.use(express.static(__dirname + "/public"))
 app.get("/photos", (req, res) => {
     agent.get(photos)
         //.set("accept", "application/json")
-        .end((err, resp) => {
+        .end((err, photoResp) => {
             if (err) res.json({ error: err })
 
             else {
-                console.log(resp.text)
-                return resp.json(resp.text)
+                console.log(photoResp.text)
+                return res.json(photoResp.text)
             }
         })
 })
