@@ -18,10 +18,7 @@
 
           <div v-for="photo in photos">
             <h3> {{ photo.phone_number }} </h3>
-
-            <div v-for="url in photo.urls">
-                <img :url="url" />
-            </div>
+            <img :url="photo.urls && photo.urls[0]" />
           </div>
       </div>
     <script src="vue.js"></script>
