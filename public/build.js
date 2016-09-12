@@ -4,7 +4,7 @@ const app = new Vue({
     data: {
         photos: []
     },
-            console.log(photos)
+
     created () {
         fetch("/photos").then(resp => {
             return resp.json()
